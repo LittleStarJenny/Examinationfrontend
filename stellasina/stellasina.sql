@@ -1,5 +1,5 @@
 
-CREATE DATABASE Stellasina;
+
 
 
 IF OBJECT_ID('dbo.Orderitem', 'U') IS NOT NULL
@@ -19,7 +19,7 @@ DROP TABLE dbo.Orders
 GO
 
 IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-DROP TABLE dbo.Customers
+DROP TABLE dbo.Customers;
 GO
 
 
@@ -29,19 +29,19 @@ GO
 -- Create the table in the specified schema
 CREATE TABLE dbo.Products
 (
-    ProductsId INT NOT NULL PRIMARY KEY, -- primary key column
-    [ProductName] [NVARCHAR](50) NOT NULL,
+    `ProductsId` INT NOT NULL PRIMARY KEY, -- primary key column
+    ProductName [NVARCHAR](50) NOT NULL,
     [Description] [NVARCHAR](500) NOT NULL,
-    [Price]  INT NOT NULL,
-    [Color] [NVARCHAR](50) NOT NULL,
-    [Img]  [NVARCHAR](500) NOT NULL
+    Price  INT NOT NULL,
+    Color [NVARCHAR](50) NOT NULL,
+    Img  [NVARCHAR](500) NOT NULL
 );
 GO
 
 -- Insert rows into table 'Products'
 INSERT INTO Products
 ( -- columns to insert data into
- [ProductsId], [ProductName], [Description], [Price], [Color], [Img]
+ ProductsId, ProductName, [Description], Price, Color, Img
 )
 VALUES
 ( 1, 'Deco Vibe', 'Deco Vibe erbjuder ett fullständigt stöd och är dessutom en snygg bh. Med plunge-effekten får du ett diskret lyft och en perfekt rundning.', 599, 'Black', 'img/Deco-Vibe-black-front.jpg'),
@@ -104,7 +104,7 @@ VALUES
 ( 24, 'DVH550', 'L', 8),
 ( 25, 'LKT123', 'S', 9),
 ( 26, 'LKT124', 'M', 9),
-( 27, 'LKT125', 'L', 9)
+( 27, 'LKT125', 'L', 9);
 GO
 
 
@@ -135,7 +135,7 @@ VALUES
 ( 2, 'Britt-Karin', 'Göransson', '1956-04-05', 'Ottekilsvägen 13', 12430, 'Bandhagen', 'britt.karin@mail.com', '070-456 48 93'),
 ( 3, 'Ida', 'Aspnor', '1987-05-06', 'Skarplöts Allé 56', 19856, 'Haninge', 'ida1987@hotmail.com', '073-569 78 23'),
 ( 4, 'Ida', 'Holmström','1989-04-05', 'Fjärilsstigen 151', 14678, 'Salem', 'holmstrom.ida@live.com', '070-656 89 13'),
-( 5, 'Clara', 'Delding', '1991-10-26', 'Testvägen 154', 12369, 'Farsta', 'clara.D@live.se', '073-450 15 98')
+( 5, 'Clara', 'Delding', '1991-10-26', 'Testvägen 154', 12369, 'Farsta', 'clara.D@live.se', '073-450 15 98');
 GO
 
 
@@ -168,7 +168,7 @@ VALUES
 ( 3, 6, 1, '2018-06-05'),
 (4, 3, 5, '2017-10-18'),
 (5, 4, 2, '2018-11-26'),
-(6, 5, 1, '2019-01-09')
+(6, 5, 1, '2019-01-09');
 
 -- add more rows here
 GO
@@ -203,5 +203,5 @@ VALUES
 ( 5, 8, 3, 4),
 ( 6, 5, 1, 4),
 ( 7, 25, 3, 5),
-(8, 13, 4, 6)
+(8, 13, 4, 6);
 GO
